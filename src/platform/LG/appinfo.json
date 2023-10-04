@@ -1,0 +1,12 @@
+{
+  "id": "com.videojsplayer.app",
+  "version": "1.0.0",
+  "vendor": "TOTHENEW",
+  "type": "web",
+  "main": "index.html",
+  "title": "VideoPlayerwithWebpackSetup",
+  "icon": "tothenewLogo.png",
+  "largeIcon": "tothenewLogo.png",
+  "disableBackHistoryAPI": true,
+  "iconColor": "#1f0e50"
+}

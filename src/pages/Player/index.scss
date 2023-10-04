@@ -1,0 +1,83 @@
+@import "../../assets/styles/functions.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.player-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #000;
+
+  .player-desc {
+    position: absolute;
+    z-index: 2;
+    top: get-vw(70px);
+    left: get-vw(70px);
+
+    .player-title {
+      overflow: hidden;
+      font-size: get-vw(48px);
+      line-height: get-vw(64px);
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: rgb(241 34 158) get-vw(5px) get-vw(2px) get-vw(15px);
+    }
+  }
+
+  .player-main {
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+
+    .video-js,
+    .vjs-tech {
+      height: 100vh !important;
+      width: 100vw;
+    }
+  }
+
+  .player-controls {
+    position: absolute;
+    display: inline-block;
+    bottom: get-vw(70px);
+    left: 45vw;
+    z-index: 2;
+
+    .play-pause-container {
+      display: inline-flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: get-vw(150px);
+        height: get-vw(150px);
+      }
+
+      &.focus,
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
+
+.loader-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

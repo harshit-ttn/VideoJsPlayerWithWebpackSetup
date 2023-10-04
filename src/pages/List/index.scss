@@ -1,0 +1,108 @@
+@import "../../assets/styles/functions.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.list-page {
+  background-color: #182031;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .left-circle,
+    .right-circle,
+    .bottom-triangle,
+    .upper-triangle {
+      position: absolute;
+      background-color: #61dafb;
+      opacity: 0.2;
+    }
+
+    .left-circle {
+      width: get-vw(200px);
+      height: get-vw(200px);
+      border-radius: 50%;
+      top: get-vw(-50px);
+      left: get-vw(-50px);
+    }
+
+    .right-circle {
+      width: get-vw(150px);
+      height: get-vw(150px);
+      border-radius: 50%;
+      top: get-vw(60px);
+      right: get-vw(-50px);
+    }
+
+    .bottom-triangle {
+      width: 0;
+      height: 0;
+      border-left: get-vw(100px) solid transparent;
+      border-right: get-vw(100px) solid transparent;
+      border-bottom: get-vw(100px) solid #61dafb;
+      bottom: get-vw(-50px);
+      left: get-vw(50px);
+    }
+
+    .upper-triangle {
+      width: 0;
+      height: 0;
+      border-left: get-vw(100px) solid transparent;
+      border-right: get-vw(100px) solid transparent;
+      border-top: get-vw(100px) solid #61dafb;
+      top: get-vw(-50px);
+      right: get-vw(50px);
+    }
+  }
+
+  .content-title-heading {
+    position: relative;
+    font-family: "Arial", sans-serif;
+    font-size: get-vw(72px);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: get-vw(120px);
+    text-shadow: #f06 get-vw(5px) get-vw(2px) get-vw(15px);
+
+    .fancy {
+      position: relative;
+      white-space: nowrap;
+      &:after {
+        --deco-height: 0.3125em;
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calc(var(--deco-height) * -0.625);
+        height: var(--deco-height);
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%2300FDCF' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        background-size: auto 100%;
+        background-repeat: round;
+        background-position: 0em;
+      }
+    }
+  }
+
+  .movie-block-container {
+    margin-top: get-vw(100px);
+    margin-left: get-vw(100px);
+    margin-right: get-vw(100px);
+    display: block;
+    pointer-events: visible;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
